@@ -21,8 +21,10 @@ my $work_dir = "$ENV{HOME}/public_html/gallery";
 my $pictures_dir = "pictures";
 my $thumbnails_dir = "thumbnails";
 my $gallery_html = "gallery.html";
-my $url = "http://localhost/$ENV{USER}/gallery";
-
+# if /var/www/username exists:
+#my $url = "http://localhost/$ENV{USER}/gallery";
+# if mod userdir is enabled:
+my $url = "http://localhost/\~$ENV{USER}/gallery";
 
 chdir ("$work_dir/$pictures_dir");
 my @picture_folders = glob("*");
