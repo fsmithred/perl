@@ -17,7 +17,7 @@ use Cwd;
 
 
 #--------------------------------------------------#
-# VARIABLES
+# VARIABLES - Change localhost to a real host name or IP number for public access.
 my $work_dir = "$ENV{HOME}/public_html/gallery";
 my $pictures_dir = "pictures";
 my $thumbnails_dir = "thumbnails";
