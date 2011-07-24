@@ -53,15 +53,18 @@ open(my $out, ">", "$work_dir/$gallery_html");
 #--------------------------------------------------#
 # WRITE  HEADER
 my $header = << "EOF";
-<html>
-<head>
+<!doctype html>
+\n<html>
+\n<head>
 <title>Gallery</title>
 <meta charset="utf-8">
-</head>
+<link rel="stylesheet" href="../../css/screen-index.css">
+\n</head>
 
-<body>
+\n<body>
 <h1>My pictures</h1>
-<p>Some words of wisdom here. Whatever you might want. </p>
+<p> Just some shots. </p></br>
+
 EOF
 
 
@@ -81,7 +84,7 @@ foreach my $folder (@picture_folders) {
    chdir ("$work_dir/$pictures_dir/$folder");
    my @pictures = glob("*");
    
-   say $out "<h2>$folder</h2>";
+   say $out "\n</br></br>\n<h2>$folder</h2>";
    
    # Create the folder for the thumbnails if it doesn't exist
    unless ( -d "$work_dir/$thumbnails_dir/$folder" ) {
@@ -137,9 +140,11 @@ foreach my $folder (@thumbnail_folders) {
 #--------------------------------------------------#
 # FOOTER
 my $footer = << "EOF";
+\n</br></br>
 <p>Powered by Debian, perl and vim</p>
-</body>
+\n</body>\n
 </html>
+
 EOF
 
 # PRINT the FOOTER
