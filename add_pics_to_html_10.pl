@@ -21,7 +21,7 @@ my $work_dir = "$ENV{HOME}/public_html/gallery";
 my $pictures_dir = "pictures";
 my $thumbnails_dir = "thumbnails";
 my $gallery_html = "gallery.html";
-# if /var/www/username exists:
+# if /var/www/username exists as symlink to /home/username/public_html:
 #my $url = "http://localhost/$ENV{USER}/gallery";
 # if mod userdir is enabled:
 my $url = "http://localhost/\~$ENV{USER}/gallery";
